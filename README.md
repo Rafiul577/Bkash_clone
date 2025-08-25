@@ -1,70 +1,38 @@
-# 🏦 bKash Clone - Complete Mobile App
+# 🏦 bKash Clone - Mobile App
 
-A fully functional bKash mobile app clone built with **Android Jetpack Compose** and **Node.js backend**, featuring authentication, home screen with services, and balance management.
+A full-stack clone of the bKash mobile app's login and home pages, built for educational purposes using **Android Jetpack Compose** (front-end) and **Node.js with MongoDB** (back-end). This project showcases mobile app development and AI-assisted coding with Cursor AI.
 
-## 🎯 **Project Overview**
+[![bKash Clone](https://img.shields.io/badge/bKash-Clone-orange)](https://github.com/Rafiul577/bkash-clone)
 
-This project demonstrates a complete mobile banking app with:
-- **Frontend**: Android app with bKash-style UI
-- **Backend**: Node.js API with MongoDB database
-- **Authentication**: Phone number + PIN login system
-- **Features**: Balance display, services grid, animations
+## 🎯 Project Overview
 
----
+This repository contains a fully functional clone of the bKash mobile app, Bangladesh's leading mobile financial service. Developed for educational purposes, it replicates the login and home pages with a focus on UI/UX and full-stack integration. **Note**: This is not an official bKash app and should not be used for real transactions or sensitive data.
 
-## 🚀 **Quick Start Guide**
+- **Frontend**: Android app with bKash-style UI using Jetpack Compose.
+- **Backend**: Node.js API with MongoDB for data storage.
+- **Features**: Phone number + PIN authentication, balance display, services grid, and animations.
+- **AI Assistance**: Built entirely using Cursor AI's Agent AI features for code generation, UI design, API integration, and debugging.
 
-### **Prerequisites**
-- ✅ **Android Studio** (latest version)
-- ✅ **Node.js** (v16 or higher)
-- ✅ **MongoDB** (running locally)
-- ✅ **Java 17** or higher
+## 🛠️ Technical Stack
 
-### **Step 1: Start the Backend**
-```bash
-# Navigate to backend directory
-cd backend
+### Frontend (Android)
+- **Language**: Kotlin
+- **UI Framework**: Jetpack Compose
+- **Architecture**: MVVM + Repository Pattern
+- **Dependency Injection**: Hilt
+- **Networking**: Retrofit + OkHttp
+- **Local Storage**: DataStore
+- **State Management**: StateFlow
 
-# Install dependencies
-npm install
+### Backend (Node.js)
+- **Runtime**: Node.js (v16+)
+- **Framework**: Express.js
+- **Database**: MongoDB with Mongoose
+- **Authentication**: JWT
+- **Security**: bcrypt for PIN hashing
+- **Validation**: Custom phone number validation
 
-# Create test users in database
-node simple-users.js
-
-# Start the server
-npm start
-```
-
-**Expected Output:**
-```
-Connected to MongoDB
-Server running on port 3000
-```
-
-### **Step 2: Open in Android Studio**
-1. **Open Android Studio**
-2. **Open Project**: Select `/Users/rafi/Documents/projects/Bkash_clone`
-3. **Wait for Gradle sync** to complete
-4. **Connect device/emulator**
-5. **Click Run** (green play button)
-
----
-
-## 📱 **Test Credentials**
-
-Use any of these credentials to test the app:
-
-| User | Phone Number | PIN | Balance |
-|------|-------------|-----|---------|
-| **Rafiul Hasan** | `01536087049` | `1234` | **৳5,000** |
-| **Ahmed Khan** | `01712345678` | `5678` | **৳2,500** |
-| **Fatima Begum** | `01898765432` | `9999` | **৳7,500** |
-| **Mohammad Ali** | `01611223344` | `1111` | **৳1,200** |
-| **Ayesha Rahman** | `01987654321` | `2222` | **৳8,900** |
-
----
-
-## 🏗️ **Project Structure**
+## 🏗️ Project Structure
 
 ```
 Bkash_clone/
@@ -90,100 +58,99 @@ Bkash_clone/
 └── README.md                        # This file
 ```
 
----
+## 🎨 Features Implemented
 
-## 🎨 **Features Implemented**
+### Authentication System
+- Phone number + PIN login with Bangladeshi phone number validation.
+- In-app number pad for PIN entry.
+- JWT-based authentication with session persistence.
 
-### **Authentication System**
-- ✅ Phone number + PIN login
-- ✅ Input validation (Bangladeshi phone numbers)
-- ✅ In-app numberpad for PIN entry
-- ✅ JWT token management
-- ✅ Session persistence
+### Home Screen
+- User profile and balance display with reveal animation.
+- 4x4 services grid with 16 interactive services.
+- Banner carousel and multiple content sections.
+- Bottom navigation for seamless UX.
 
-### **Home Screen**
-- ✅ User profile display
-- ✅ **Balance display with correct amounts**
-- ✅ Interactive balance reveal animation
-- ✅ Services grid (4x4 layout with 16 services)
-- ✅ Banner carousel
-- ✅ Multiple content sections
-- ✅ Bottom navigation
+### UI/UX
+- Responsive design following Material Design principles.
+- bKash brand colors and styling.
+- Smooth animations and comprehensive error handling.
 
-### **UI/UX**
-- ✅ Responsive design
-- ✅ Material Design principles
-- ✅ bKash brand colors and styling
-- ✅ Smooth animations
-- ✅ Error handling and loading states
+## 🚀 Setup Instructions
 
----
+These instructions are designed to help anyone set up and run the bKash clone project on their own device.
 
-## 🛠️ **Technical Stack**
+### Prerequisites
+- **Android Studio** (latest version, e.g., Koala or later)
+- **Node.js** (v16 or higher)
+- **MongoDB** (installed and running locally)
+- **Java 17** or higher
+- A compatible Android device or emulator (Android 7.0+ recommended)
+- Git installed for cloning the repository
+- A stable internet connection for dependency downloads
 
-### **Frontend (Android)**
-- **Language**: Kotlin
-[![bKash Clone](https://img.shields.io/badge/bKash-Clone-orange)](https://github.com/Rafiul577/bkash-clone)
-- **Architecture**: MVVM + Repository Pattern
-- **DI**: Hilt
-- **Networking**: Retrofit + OkHttp
-- **Local Storage**: DataStore
-- **State Management**: StateFlow
+### Step 1: Clone the Repository
+1. Open a terminal on your device.
+2. Clone the project:
+   ```bash
+   git clone https://github.com/Rafiul577/bkash-clone.git
+   ```
+3. Navigate to the project directory:
+   ```bash
+   cd bkash-clone
+   ```
 
-### **Backend (Node.js)**
-- **Runtime**: Node.js
-- **Security**: bcrypt for PIN hashing
+### Step 2: Set Up the Backend
+1. Navigate to the backend directory:
+   ```bash
+   cd backend
+   ```
+2. Install Node.js dependencies:
+   ```bash
+   npm install
+   ```
+3. Ensure MongoDB is running locally:
+   ```bash
+   mongod --version
+   ```
+   If MongoDB is not installed, download and install it from [mongodb.com](https://www.mongodb.com/try/download/community) and start the service (e.g., `mongod` in a separate terminal).
+4. Create test users in the database:
+   ```bash
+   node simple-users.js
+   ```
+5. Start the backend server:
+   ```bash
+   npm start
+   ```
+6. Verify the server is running (output should be):
+   ```
+   Connected to MongoDB
+   Server running on port 3000
+   ```
 
+### Step 3: Set Up the Android App
+1. Open **Android Studio** on your device.
+2. Select **Open an existing project** and choose the `bkash-clone` folder (e.g., `/path/to/bkash-clone`).
+3. Wait for Gradle to sync (this may take a few minutes to download dependencies).
+4. Configure an Android device or emulator:
+   - For an emulator, create a virtual device in Android Studio (Android 7.0+ recommended).
+   - For a physical device, enable USB debugging and connect it to your computer via USB, or ensure it’s on the same network as the backend server.
+5. Update the API URL in the app’s network configuration:
+   - For emulators, use `http://10.0.2.2:3000/api/` (edit in the app’s network settings, e.g., `data/network` files).
+   - For physical devices, use `http://<your-computer-ip>:3000/api/` (find your computer’s IP with `ifconfig` on macOS/Linux or `ipconfig` on Windows, and ensure both devices are on the same Wi-Fi network).
+6. Click the **Run** button (green play button) in Android Studio to build and deploy the app.
 
-## 🔧 **Troubleshooting**
+### Step 4: Test the App
+- Use the test credentials below to log in.
+- Verify that the balance displays correctly and the services grid is interactive.
 
-### **Common Issues & Solutions**
+## 📱 Test Credentials
 
-```bash
-# Check if MongoDB is running
-mongod --version
-# Check if port 3000 is available
-lsof -i :3000
+| User            | Phone Number  | PIN  | Balance  |
+|-----------------|---------------|------|----------|
+| Rafiul Hasan    | `01536087049` | `1234` | ৳5,000  |
+| Ahmed Khan      | `01712345678` | `5678` | ৳2,500  |
+| Fatima Begum    | `01898765432` | `9999` | ৳7,500  |
+| Mohammad Ali    | `01611223344` | `1111` | ৳1,200  |
+| Ayesha Rahman   | `01987654321` | `2222` | ৳8,900  |
 
-# Kill existing process if needed
-```
-
-./gradlew clean
-./gradlew assembleDebug
-
-#### **3. Login Issues**
-- **401 Error**: Check phone number format (no +88 prefix)
-- **400 Error**: Ensure PIN is 4-6 digits
-- **Network Error**: Verify backend is running on port 3000
-
-#### **4. Balance Showing 0**
-- ✅ **FIXED**: Balance now shows correct amounts
-- If issue persists, check backend logs for user data
-
-### **Network Configuration**
-The app is configured for:
-- **Emulator**: `http://10.0.2.2:3000/api/`
-- **Physical Device**: `http://localhost:3000/api/`
-
-For physical devices, ensure your device and computer are on the same network.
-
-### **Backend Testing**
-```bash
-# Health check
-curl http://localhost:3000/health
-
-# Test login
-curl -X POST http://localhost:3000/api/auth/login \
-  -H "Content-Type: application/json" \
-
-### **Android Testing**
-
----
-
-## 🎯 **Current Status**
-### **✅ Project Status: READY TO RUN**
-
-- ✅ **All Core Features**: Implemented and tested
-- ✅ **Authentication**: Working with proper validation
-- ✅ **Integration**: Frontend-backend communication working
-- ✅ **Error Handling**: Comprehensive error management
